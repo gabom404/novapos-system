@@ -16,7 +16,7 @@ $pdf->AddPage();
 // Título del ticket
 $pdf->SetFont('Arial', 'B', 10);
 $pdf->SetX(10);
-$pdf->Cell(0, 10, 'EMPIRE BARBER SHOP', 0, 1, 'C');
+$pdf->Cell(0, 10, mb_convert_encoding(mb_strtoupper(nombreNegocio(), 'UTF-8'), 'ISO-8859-1', 'UTF-8'), 0, 1, 'C');
 $pdf->SetFont('Arial', '', 8);
 
 // Fecha y hora

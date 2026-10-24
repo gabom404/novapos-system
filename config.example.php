@@ -13,3 +13,6 @@ define('DB_NAME', 'ventas_php');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_CHARSET', 'utf8mb4');
+
+// Nombre del negocio que aparece en el ticket y en el reporte de ganancias
+define('BUSINESS_NAME', 'NovaPOS');

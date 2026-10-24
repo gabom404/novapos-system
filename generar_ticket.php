@@ -36,7 +36,7 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 8);
 
 // Agrega el título del ticket
-$pdf->Cell(40, 10, 'EMPIRE BARBER SHOP', 0, 1, 'C');
+$pdf->Cell(40, 10, mb_convert_encoding(mb_strtoupper(nombreNegocio(), 'UTF-8'), 'ISO-8859-1', 'UTF-8'), 0, 1, 'C');
 $pdf->Ln(2);
 
 

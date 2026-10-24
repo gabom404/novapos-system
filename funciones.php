@@ -506,6 +506,17 @@ function obtenerVentaPorId($idVenta) {
     return null;
 }
 
+/**
+ * Nombre del negocio para tickets y reportes (BUSINESS_NAME en config.php).
+ */
+function nombreNegocio() {
+    $configFile = __DIR__ . '/config.php';
+    if (!defined('BUSINESS_NAME') && file_exists($configFile)) {
+        require_once $configFile;
+    }
+    return defined('BUSINESS_NAME') ? BUSINESS_NAME : 'NovaPOS';
+}
+
 function conectarBaseDatos() {
     $configFile = __DIR__ . '/config.php';
     if (file_exists($configFile)) {
